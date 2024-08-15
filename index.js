@@ -1,7 +1,5 @@
 
 import * as fs from "fs";
-const docx = require("docx");
-
 import { Document, Packer, Paragraph, TextRun } from "docx";
 
 
@@ -28,9 +26,9 @@ const doc = new Document({
     ],
 });
 
-// Used to export the file into a .docx file
+
 Packer.toBuffer(doc).then((buffer) => {
     fs.writeFileSync("My Document.docx", buffer);
 });
 
-// Done! A file called 'My Document.docx' will be in your file system.
+
